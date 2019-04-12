@@ -1,0 +1,101 @@
+<?php
+echo "<h1>list of funtion outputs</h1>";
+$array1=["honda","hero","ford"];
+$array2=["tvs","yamaha","bajaj","honda"];
+$array3=[1,2,3,4,5];
+$array4=["mon"=>1,"tue"=>2];
+$str1 = "hi how are you";
+$str2 = "kellton.edu.in";
+
+function square($input){
+return $input*$input;
+}
+
+print_r(array_merge($array1,$array2));
+echo "<br>";
+print_r(array_combine($array1,$array2));
+echo "<br>";
+print_r(array_map("square",$array3));
+echo "<br>";
+print_r(explode(" ",$str1));
+echo "<br>";
+print_r(implode(" ",$array1));
+echo "<br>";
+sort($array1);
+print_r($array1);
+echo "<br>";
+echo count($array1);
+echo "<br>";
+print_r(in_array("hero",$array1));
+echo "<br>";
+echo array_search("hero",$array1);
+echo "<br>";
+echo strstr($str1, "how");
+echo "<br>";
+//die("this will end the programm");
+echo json_encode($array4);
+echo "<br>";
+$weeks = '{"monday":1,"tuesday":2,"wednesday":3,"thursday":4}';
+var_dump(json_decode($weeks,true));
+echo "<br>";
+array_pop($array1);
+print_r($array1);
+echo "<br>";
+array_push($array1,"maruhti");
+print_r($array1);
+echo "<br>";
+$result=array_diff($array1,$array2);
+print_r($result);
+echo "<br>";
+array_splice($array1,0,1,$array2);
+print_r($array1);
+echo "<br>";
+print_r(array_slice($array1,1));
+echo "<br>";
+echo date("d:m:y");
+echo "<br>";
+echo(strtotime("now") . "<br>");
+echo "<br>";
+echo end($array2);
+echo "<br>";
+echo max($array3);
+echo "<br>";
+echo min($array3);
+echo "<br>";
+echo stripos("hi how r u ","how");
+echo "<br>";
+  echo strpos("hi how r u ","how");
+  echo "<br>";
+  echo stristr("hi how r u", "r",TRUE); 
+ echo "<br>";
+  echo strlen("hi how r u");
+echo "<br>";
+  echo substr("hi how r u",6);
+ echo "<br>";
+  echo str_replace("r","are","hi how r u");
+echo "<br>";
+  echo strtolower("hi how R U");
+  echo "<br>";
+  echo strtoupper("hi how r u");
+ echo "<br>";
+  echo gettype($str1)."\n"; 
+  echo "<br>";
+  echo count($array3);
+  echo "<br>";
+  $number1 = 45;
+$str4 = "india";
+$text = sprintf("There are %u million people in %s.",$number1,$str4);
+echo $text;
+echo "<br>";
+if (array_key_exists("mon",$array4))
+  {
+  echo "Key exists!";
+  }
+else
+  {
+  echo "Key does not exist!";
+  }
+?>
+
+
+
